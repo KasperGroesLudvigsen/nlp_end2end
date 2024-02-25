@@ -44,7 +44,7 @@ for i, sentence in enumerate(sentence_list):
 
         chunks.append(chunk)
 
-        chunk = sentence
+        chunk = sentence_list[i-1] + ". " + sentence
 
         overlap = True
 
