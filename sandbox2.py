@@ -1,5 +1,4 @@
 
-import pandas as ps
 document = """Ved sikkerhedskontrollen bliver de hjemmelavede skilte konfiskeret, og de adopteredes budskaber pakket væk til efter samrådet. Så herfra er det politikernes hjemmebane, og de adopterede må stille lytte til de folkevalgte diskutere, hvem og hvor meget der skal undersøges.
 
 De adopterede vil have placeret et ansvar for de mange skandaler, der de seneste år og uger er tromlet ind over adoptionsområdet.
@@ -46,7 +45,6 @@ for i, sentence in enumerate(sentence_list):
 
         chunk = sentence_list[i-1] + ". " + sentence
 
-        overlap = True
 
 for chunk in chunks:
 
