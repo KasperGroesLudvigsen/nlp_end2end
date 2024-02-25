@@ -32,7 +32,9 @@ max_len = 512
 
 chunk = ""
 
-for sentence in sentence_list:
+overlap = False
+
+for i, sentence in enumerate(sentence_list):
 
     if len(chunk) + len(sentence) < max_len:
 
@@ -42,7 +44,9 @@ for sentence in sentence_list:
 
         chunks.append(chunk)
 
-        chunk = ""
+        chunk = sentence
+
+        overlap = True
 
 for chunk in chunks:
 
