@@ -20,5 +20,16 @@ Here's how to call the API endpoint using curl:
 ```bash
 curl -X 'POST' \ 'http://localhost:8000/analyze' \ -H 'accept: application/json' \ -H 'Content-Type: application/json' \ -d '{ "input_string": "This tutorial is very useful" }'
 ```
+The result should look like this:
+```bash
+{
+  "result": [
+    {
+      "label": "POSITIVE",
+      "score": 0.9992365837097168
+    }
+  ]
+}
+```
 
 For an example of how to call the API endpoint through a Python script, see `call_api.py`
