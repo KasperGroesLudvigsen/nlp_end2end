@@ -17,7 +17,6 @@ This will expose an API endpoint on `http://your_address:8000/analyze`
 
 Here's how to call the API endpoint using curl:
 
-Call API: 
 ```bash
 curl -X 'POST' \ 'http://localhost:8000/analyze' \ -H 'accept: application/json' \ -H 'Content-Type: application/json' \ -d '{ "input_string": "This tutorial is very useful" }'
 ```
