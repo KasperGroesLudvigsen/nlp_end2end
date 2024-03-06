@@ -1,18 +1,14 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from transformers import pipeline
-#import torch
-
-#device = 0 if torch.cuda.is_available() else -1
-
-app = FastAPI()
 
 # For other task options, see https://huggingface.co/docs/transformers/en/main_classes/pipelines 
 sentiment_pipeline = pipeline("sentiment-analysis")
 
+app = FastAPI()
+
 data = ["I love you", "I hate you"]
 sentiment_pipeline(data)
-
 
 class RequestModel(BaseModel):
     input_string: str
@@ -27,5 +23,3 @@ def your_function(request: RequestModel):
             {"sentiment" : sentiment[0]["label"],
              "score" : sentiment[0]["score"]}
              }
-
-
